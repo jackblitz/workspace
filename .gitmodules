@@ -1,0 +1,6 @@
+[submodule "Vega42"]
+	path = vega42
+	url = https://github.com/jackblitz/Vega42.git
+[submodule "polaris"]
+	path = polaris
+	url = https://github.com/jackblitz/PolarisEngine.git
