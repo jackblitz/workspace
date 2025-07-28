@@ -1,0 +1,5 @@
+/nologo
+/OUT:bazel-out/x64_windows-dbg/bin/modules/game_logic/game_logic_lib.lib
+/MACHINE:X64
+bazel-out/x64_windows-dbg/bin/modules/game_logic/_objs/game_logic_lib/EngineContext.obj
+/ignore:4221

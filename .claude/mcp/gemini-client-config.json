@@ -1,0 +1,25 @@
+{
+  "mcp_client": {
+    "name": "gemini-mcp-client",
+    "version": "1.0.0",
+    "servers": [
+      {
+        "name": "claude-code-local",
+        "transport": {
+          "type": "stdio",
+          "command": "claude",
+          "args": ["mcp", "serve", "--debug"]
+        },
+        "capabilities": {
+          "tools": ["view", "edit", "ls"],
+          "resources": ["file:///*"]
+        }
+      }
+    ],
+    "settings": {
+      "auto_connect": true,
+      "retry_attempts": 3,
+      "timeout_ms": 30000
+    }
+  }
+}

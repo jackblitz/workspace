@@ -1,0 +1,5 @@
+/nologo
+/OUT:bazel-out/x64_windows-dbg/bin/common/common_dll_impl.lib
+/MACHINE:X64
+bazel-out/x64_windows-dbg/bin/common/_objs/common_dll_impl/Logger.obj
+/ignore:4221

@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "claude-code-local": {
+      "command": "claude",
+      "args": ["mcp", "serve", "--debug"],
+      "env": {},
+      "description": "Claude Code MCP Server - Exposes file manipulation tools"
+    }
+  },
+  "settings": {
+    "port": 3000,
+    "host": "localhost",
+    "protocol": "stdio"
+  }
+}

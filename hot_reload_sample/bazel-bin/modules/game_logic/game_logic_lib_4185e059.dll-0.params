@@ -1,0 +1,14 @@
+/nologo
+/DLL
+/OUT:bazel-out/x64_windows-dbg/bin/modules/game_logic/game_logic_lib_4185e059.dll
+/IMPLIB:bazel-out/x64_windows-dbg/bin/modules/game_logic/game_logic_lib.if.lib
+bazel-out/x64_windows-dbg/bin/modules/game_logic/_objs/game_logic_lib/EngineContext.obj
+bazel-out/x64_windows-dbg/bin/common/common_lib.if.lib
+/SUBSYSTEM:CONSOLE
+../../common/common_lib.if.lib
+/MACHINE:X64
+/DEFAULTLIB:msvcrtd.lib
+/DEBUG:FULL
+/INCREMENTAL:NO
+/DEF:bazel-out/x64_windows-dbg/bin/modules/game_logic/game_logic_lib.gen.empty.def
+/ignore:4070

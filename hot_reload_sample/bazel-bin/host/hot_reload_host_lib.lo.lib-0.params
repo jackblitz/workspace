@@ -1,0 +1,6 @@
+/nologo
+/OUT:bazel-out/x64_windows-dbg/bin/host/hot_reload_host_lib.lo.lib
+/MACHINE:X64
+bazel-out/x64_windows-dbg/bin/host/_objs/hot_reload_host_lib/Logger.obj
+bazel-out/x64_windows-dbg/bin/host/_objs/hot_reload_host_lib/game_logic_loader.obj
+/ignore:4221

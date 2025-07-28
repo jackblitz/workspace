@@ -1,0 +1,12 @@
+/nologo
+/DLL
+/OUT:bazel-out/x64_windows-dbg/bin/common/common.dll
+/IMPLIB:bazel-out/x64_windows-dbg/bin/common/common.if.lib
+/WHOLEARCHIVE:bazel-out/x64_windows-dbg/bin/common/common_lib.lib
+/SUBSYSTEM:CONSOLE
+/MACHINE:X64
+/DEFAULTLIB:msvcrtd.lib
+/DEBUG:FULL
+/INCREMENTAL:NO
+/DEF:bazel-out/x64_windows-dbg/bin/common/common.gen.empty.def
+/ignore:4070

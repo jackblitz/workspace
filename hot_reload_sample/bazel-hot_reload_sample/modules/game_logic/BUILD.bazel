@@ -1,0 +1,17 @@
+load("@rules_cc//cc:defs.bzl", "cc_library", "cc_shared_library")
+
+cc_library(
+    name = "game_logic_lib",
+    srcs = glob(["*.cpp"]),
+    deps = [
+        "//interfaces",
+        "//host:hot_reload_host_lib",
+    ],
+    defines = ["GAME_DLL_EXPORT"],
+)
+
+cc_shared_library(
+    name = "game_logic",
+    deps = [":game_logic_lib"],
+    visibility = ["//visibility:public"],
+)

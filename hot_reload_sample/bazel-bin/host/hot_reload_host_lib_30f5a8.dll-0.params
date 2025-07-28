@@ -1,0 +1,13 @@
+/nologo
+/DLL
+/OUT:bazel-out/x64_windows-dbg/bin/host/hot_reload_host_lib_30f5a8.dll
+/IMPLIB:bazel-out/x64_windows-dbg/bin/host/hot_reload_host_lib.if.lib
+bazel-out/x64_windows-dbg/bin/host/_objs/hot_reload_host_lib/Logger.obj
+bazel-out/x64_windows-dbg/bin/host/_objs/hot_reload_host_lib/game_logic_loader.obj
+/SUBSYSTEM:CONSOLE
+/MACHINE:X64
+/DEFAULTLIB:msvcrtd.lib
+/DEBUG:FULL
+/INCREMENTAL:NO
+/DEF:bazel-out/x64_windows-dbg/bin/host/hot_reload_host_lib.gen.empty.def
+/ignore:4070

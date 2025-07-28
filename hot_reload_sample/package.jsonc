@@ -1,0 +1,7 @@
+{
+  "name": "HotReloadSample",
+  "version": "1.0.0",
+  "packages": {
+    "GameLogic": "modules/game_logic"
+  }
+}

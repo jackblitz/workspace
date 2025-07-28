@@ -1,0 +1,41 @@
+# Enable WORKSPACE support for Bazel 8 compatibility
+# (Project needs to migrate to MODULE.bazel in the future)
+common --enable_workspace
+
+# C++20 standard
+build:linux --cxxopt=-std=c++20
+build:macos --cxxopt=-std=c++20
+build:windows --cxxopt=/std:c++20
+
+# Platform-specific warning flags
+build:linux --cxxopt=-Wall
+build:linux --cxxopt=-Wextra
+build:macos --cxxopt=-Wall
+build:macos --cxxopt=-Wextra
+# Windows uses different warning flags, configured automatically by MSVC
+
+# Debug configuration
+build:debug --compilation_mode=dbg
+build:debug --strip=never
+build:debug --copt=-DPOLARIS_DEBUG=1
+
+# Debug with hot reload (shared libraries)
+build:debug-hot-reload --config=debug
+build:debug-hot-reload --copt=-DPOLARIS_HOT_RELOAD=1
+build:debug-hot-reload --dynamic_mode=fully
+
+# Release configuration  
+build:release --compilation_mode=opt
+build:release --strip=always
+build:release --copt=-O3
+build:release --copt=-DNDEBUG
+build:release --copt=-DPOLARIS_RELEASE=1
+build:release --linkopt=-s
+
+# Platform detection
+build:windows --copt=-DPOLARIS_PLATFORM_WINDOWS=1
+build:linux --copt=-DPOLARIS_PLATFORM_LINUX=1  
+build:macos --copt=-DPOLARIS_PLATFORM_MACOS=1
+
+# Auto-detect platform
+build --enable_platform_specific_config

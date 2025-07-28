@@ -1,0 +1,51 @@
+load("@rules_cc//cc:defs.bzl", "cc_binary", "cc_library", "cc_test")
+
+# Copy the game_logic DLL to the host directory for hot reload
+genrule(
+    name = "copy_game_logic_dll",
+    srcs = ["//modules/game_logic"],
+    outs = ["game_logic.dll"],
+    cmd = "cp $(SRCS) $(OUTS)",
+)
+
+# Library for the host application's core logic, including the Logger
+cc_library(
+    name = "hot_reload_host_lib",
+    srcs = glob(
+        ["*.cpp"],
+        exclude=["main.cpp", "dummy_test.cpp"],
+    ),
+    hdrs = glob(["*.h"]),
+    deps = ["//interfaces"],
+    # This define is crucial for exporting symbols from the host exe
+    defines = ["LOGGER_DLL_EXPORT"],
+    visibility = ["//visibility:public"],
+    alwayslink = True,  # Ensure all symbols are included in the final binary
+)
+
+# The main application executable
+cc_binary(
+    name = "hot_reload_host",
+    srcs = [
+        "main.cpp",
+        "game_logic_loader.cpp",
+        "game_logic_loader.h",
+        "Logger.cpp",
+    ],
+    deps = ["//interfaces"],
+    defines = ["LOGGER_DLL_EXPORT"],
+    # Linker flags to export symbols
+    linkopts = select({
+        "@platforms//os:linux": ["-rdynamic"],
+        "@platforms//os:macos": ["-Wl,-export_dynamic"],
+        "//conditions:default": [],
+    }),
+    features = ["windows_export_all_symbols"], # For Windows
+    data = [":copy_game_logic_dll"],
+)
+
+cc_test(
+    name = "dummy_test",
+    srcs = ["dummy_test.cpp"],
+    deps = [":hot_reload_host_lib"],
+)

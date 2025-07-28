@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "claude-code": {
+      "command": "wsl",
+      "args": ["claude", "mcp", "serve"],
+      "env": {},
+      "description": "Claude Code MCP Server via WSL - Provides file manipulation tools (view, edit, ls)"
+    }
+  },
+  "trust": {
+    "claude-code": true
+  }
+}

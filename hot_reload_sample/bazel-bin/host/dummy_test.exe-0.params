@@ -1,0 +1,9 @@
+/nologo
+/OUT:bazel-out/x64_windows-dbg/bin/host/dummy_test.exe
+bazel-out/x64_windows-dbg/bin/host/_objs/dummy_test/dummy_test.obj
+/WHOLEARCHIVE:bazel-out/x64_windows-dbg/bin/host/hot_reload_host_lib.lo.lib
+/SUBSYSTEM:CONSOLE
+/MACHINE:X64
+/DEFAULTLIB:msvcrtd.lib
+/DEBUG:FULL
+/INCREMENTAL:NO

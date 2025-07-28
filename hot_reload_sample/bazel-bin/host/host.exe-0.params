@@ -1,0 +1,10 @@
+/nologo
+/OUT:bazel-out/x64_windows-dbg/bin/host/host.exe
+bazel-out/x64_windows-dbg/bin/host/_objs/host/main.obj
+bazel-out/x64_windows-dbg/bin/host/_objs/host/game_logic_loader.obj
+bazel-out/x64_windows-dbg/bin/common/common_lib.if.lib
+/SUBSYSTEM:CONSOLE
+/MACHINE:X64
+/DEFAULTLIB:msvcrtd.lib
+/DEBUG:FULL
+/INCREMENTAL:NO

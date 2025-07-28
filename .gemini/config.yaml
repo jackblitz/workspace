@@ -1,0 +1,25 @@
+# Gemini CLI Configuration
+# This is an alternative configuration file format
+
+# API Configuration
+api:
+  key: ${GEMINI_API_KEY}  # References the .env file
+  # Alternatively, you can put the key directly here (not recommended)
+  # key: your-api-key-here
+
+# Model Configuration
+model:
+  # Common Gemini models:
+  # name: gemini-1.5-pro
+  # name: gemini-1.5-flash
+  # name: gemini-pro
+  name: gemini-1.5-pro  # Using a known stable model
+  
+# Generation Parameters
+generation:
+  temperature: 0.7
+  max_output_tokens: 4096
+  top_p: 0.95
+  top_k: 40
+
+# MCP Configuration is in settings.json

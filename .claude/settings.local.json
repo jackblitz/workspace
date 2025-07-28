@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find:*)",
+      "WebFetch(domain:docs.anthropic.com)",
+      "Bash(claude mcp serve:*)",
+      "Bash(chmod:*)",
+      "Bash(mkdir:*)",
+      "Bash(mv:*)",
+      "Bash(rm:*)",
+      "Bash(pgrep:*)",
+      "Bash(/mnt/d/workspace/dev/.gemini/mcp-status.sh:*)",
+      "Bash(ls:*)",
+      "Bash(./build.sh:*)",
+      "Bash(touch:*)",
+      "Bash(./test_build.sh)",
+      "Bash(./build_debug.sh:*)",
+      "Bash(./build_debug.bat)",
+      "Bash(./bazel-bin/host/hot_reload_host.exe:*)",
+      "Bash(bazel query:*)"
+    ],
+    "deny": []
+  }
+}

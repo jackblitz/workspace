@@ -1,0 +1,66 @@
+{
+  "categories": {
+    "overview": {
+      "description": "High-level project architecture and overview",
+      "files": ["Project Overview.md"]
+    },
+    "guidelines": {
+      "description": "Coding standards and best practices",
+      "files": [
+        "CPU Memory-Efficient Code Guidelines.md",
+        "Naming Conventions and Code Practices.md",
+        "ECS Subsystem Architecture Best Practices with Flecs.md"
+      ]
+    },
+    "examples": {
+      "description": "Code examples and reference implementations",
+      "files": [
+        "Code Examples/Example Declarative Game Engine Architecture.md",
+        "Code Examples/Example Declarative Scene Composition.md",
+        "Code Examples/Example main.md",
+        "samples/videoplayer.md"
+      ]
+    },
+    "research": {
+      "description": "Technical research and architectural studies",
+      "files": [
+        "Research/Architectural Guide Declarative USD Framework in C++.md",
+        "Research/Clay UI as ECS Entities_.md",
+        "Research/Engine Integration Guide_ Advanced Prefabs with Encapsulated Logic.md",
+        "Research/Engine Integration Guide_ Declarative Animation System.md",
+        "Research/Engine Integration Guide_ Declarative Clay UI.md",
+        "Research/Engine Integration Guide_ Declarative Scenes with glTF.md",
+        "Research/Modern Game Engine Rendering Architectures Developer-Friendly APIs and Design Patterns.md",
+        "Research/Modern graphics API abstraction patterns that simplify complexity.md",
+        "Research/Research Engine Integration_ Packages and Prefabs.md",
+        "Research/Updated_ An Architectural Framework for Scope and Application.md"
+      ]
+    },
+    "specifications": {
+      "description": "Technical specifications and API documentation",
+      "files": [
+        "Specifications/Feature Specification_ Application and Scope Logic.md",
+        "Specifications/Feature Specification_ Declarative Scene Builder.md",
+        "Specifications/Feature Specification_ ECS Module Architecture.md",
+        "Specifications/Feature Specification_ Polaris Engine Core Architecture.md",
+        "Specifications/polaris-rendering-context-spec.md",
+        "Specifications/usd_polaris_integration_spec.md"
+      ]
+    }
+  },
+  "aliases": {
+    "@ecs": ["ECS Subsystem Architecture Best Practices with Flecs.md", "Specifications/Feature Specification_ ECS Module Architecture.md"],
+    "@rendering": ["Specifications/polaris-rendering-context-spec.md", "Research/Modern Game Engine Rendering Architectures Developer-Friendly APIs and Design Patterns.md"],
+    "@scene": ["Specifications/Feature Specification_ Declarative Scene Builder.md", "Code Examples/Example Declarative Scene Composition.md"],
+    "@ui": ["Research/Clay UI as ECS Entities_.md", "Research/Engine Integration Guide_ Declarative Clay UI.md"],
+    "@prefabs": ["Research/Engine Integration Guide_ Advanced Prefabs with Encapsulated Logic.md", "Research/Research Engine Integration_ Packages and Prefabs.md"],
+    "@memory": ["CPU Memory-Efficient Code Guidelines.md"],
+    "@naming": ["Naming Conventions and Code Practices.md"],
+    "@animation": ["Research/Engine Integration Guide_ Declarative Animation System.md"],
+    "@usd": ["Research/Architectural Guide Declarative USD Framework in C++.md", "Specifications/usd_polaris_integration_spec.md"],
+    "@gltf": ["Research/Engine Integration Guide_ Declarative Scenes with glTF.md"],
+    "@video": ["samples/videoplayer.md"],
+    "@architecture": ["Specifications/Feature Specification_ Polaris Engine Core Architecture.md", "Research/Updated_ An Architectural Framework for Scope and Application.md"],
+    "@api": ["Research/Modern graphics API abstraction patterns that simplify complexity.md"]
+  }
+}
