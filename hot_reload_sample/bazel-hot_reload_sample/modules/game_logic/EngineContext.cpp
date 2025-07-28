@@ -32,7 +32,7 @@ public:
 
     void on_update(float dt) override {
         std::cout << "DEBUG: on_update called with dt = " << dt << ", g_dll_logger = " << g_dll_logger << std::endl;
-        LOG_INFO("  [EngineContext] Updated with  dt:" + std::to_string(dt));
+        LOG_INFO("  [EngineContext] Updated with  dt: hello" + std::to_string(dt));
     }
 
     void on_unload() override {
